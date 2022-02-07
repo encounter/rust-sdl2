@@ -495,6 +495,7 @@ fn main() {
         println!("cargo:include={}", sdl2_includes);
     }
 
+    #[cfg(not(feature = "no-link"))]
     link_sdl2(target_os);
 
     // Android builds shared libhidapi.so even for static builds.

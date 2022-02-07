@@ -55,6 +55,7 @@ use-vcpkg = ["sdl2-sys/use-vcpkg"]
 use_mac_framework = ["sdl2-sys/use_mac_framework"]
 bundled = ["sdl2-sys/bundled"]
 static-link = ["sdl2-sys/static-link"]
+no-link = ["sdl2-sys/no-link"]
 
 [package.metadata.docs.rs]
 features = ["default", "gfx", "mixer", "image", "ttf"]
