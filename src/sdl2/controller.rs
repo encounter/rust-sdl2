@@ -442,6 +442,16 @@ impl GameController {
         }
     }
 
+    /// Return the joystick player index of this controller
+    #[doc(alias = "SDL_GameControllerGetPlayerIndex")]
+    pub fn player_index(&self) -> i32 {
+        unsafe { sys::SDL_GameControllerGetPlayerIndex(self.raw) }
+    }
+
+    pub fn set_player_index(&self, index: i32) {
+        unsafe { sys::SDL_GameControllerSetPlayerIndex(self.raw, index); }
+    }
+
     /// Get the position of the given `axis`
     #[doc(alias = "SDL_GameControllerGetAxis")]
     pub fn axis(&self, axis: Axis) -> i16 {
